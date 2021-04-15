@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import API_SERVICE from '../servicies/api';
+import API_SERVICE from '../services/api';
 
 export const UserProvider = React.createContext(null);
 
-function TodoProviderComponent({ children }) {
+function UserProviderComponent({ children }) {
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
@@ -24,4 +24,4 @@ function TodoProviderComponent({ children }) {
   );
 }
 
-export default TodoProviderComponent;
+export default UserProviderComponent;

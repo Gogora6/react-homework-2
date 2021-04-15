@@ -12,5 +12,17 @@ export class API_SERVICE {
       console.trace(error);
     }
   }
+
+  static async GetPostData({ start = 0, limit = 15 }) {
+    try {
+      const response = await fetch(
+        BASE_API_URL + `/posts?_start=${start}&_limit=${limit}`
+      );
+      const result = await response.json();
+      return result;
+    } catch (error) {
+      console.trace(error);
+    }
+  }
 }
 export default API_SERVICE;

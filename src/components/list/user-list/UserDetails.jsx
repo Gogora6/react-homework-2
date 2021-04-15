@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function UserDetails({ user }) {
   return (
     <tr>
@@ -8,5 +10,7 @@ function UserDetails({ user }) {
     </tr>
   );
 }
-
+UserDetails.propTypes = {
+  user: PropTypes.object.isRequired,
+};
 export default UserDetails;

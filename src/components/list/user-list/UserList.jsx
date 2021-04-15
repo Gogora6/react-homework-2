@@ -1,10 +1,9 @@
 import { useContext } from 'react';
-import { UserProvider } from '../../providers/UserProvider';
-import UserDetails from '../details/UserDetails';
+import { UserProvider } from '../../../providers/UserProvider';
+import UserDetails from './UserDetails';
 
 function UserList(props) {
   const { userData } = useContext(UserProvider);
-
   return (
     <div className="row">
       <table className="table">
@@ -14,7 +13,6 @@ function UserList(props) {
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">City</th>
-
           </tr>
         </thead>
         <tbody>
